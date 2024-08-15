@@ -111,16 +111,6 @@ def generate_contornos(raster, column_name = "ELEV", dist=10)->gpd.GeoDataFrame:
     gdf = gpd.GeoDataFrame({column_name: contour_values}, geometry=contour_lines, crs=crs)
     return gdf
 
-# # Calcular a resolução do raster
-# x_res = float(abs(altimetria['x'][1] - altimetria['x'][0]))
-# y_res = float(abs(altimetria['y'][1] - altimetria['y'][0]))
-
-# # Calcular as coordenadas dos vértices das células
-# x_start = x_coords - x_res / 2
-# x_end = x_coords + x_res / 2
-# y_start = y_coords - y_res / 2
-# y_end = y_coords + y_res / 2
-
 
 # Altitudes piezométicas conhecidas
 na = np.array([])
