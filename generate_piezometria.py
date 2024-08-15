@@ -380,13 +380,12 @@ for limit_by_cota in [True, False]:
         variance_raster = variance_raster.rio.clip(area.geometry.apply(mapping), area.crs)
         variance_raster.rio.to_raster(f"F:/Mestrado/1° Semestre/Hidrogeologia/Trabalho Prático/dados_NA/{'' if limit_by_cota else 'no_'}limit_by_cota/variancia{comple_name}.tif")
 
-        gdf = generate_contornos(null_raster)
-        gdf.to_file(f"F:/Mestrado/1° Semestre/Hidrogeologia/Trabalho Prático/dados_NA/{'' if limit_by_cota else 'no_'}limit_by_cota/cota{comple_name}.gpkg", driver="GPKG")
+        # gdf = generate_contornos(null_raster)
+        # gdf.to_file(f"F:/Mestrado/1° Semestre/Hidrogeologia/Trabalho Prático/dados_NA/{'' if limit_by_cota else 'no_'}limit_by_cota/cota{comple_name}.gpkg", driver="GPKG")
 
 
 
 # Plotando os resultados finais
-
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 
